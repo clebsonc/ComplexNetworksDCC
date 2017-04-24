@@ -1,27 +1,26 @@
-\documentclass[12pt, letterpaper, twosided]{article}
+\documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[letterpaper, margin=3.cm]{geometry}
 
-\title{Article: Strategic Network Formation with Structural Holes}
+\title{Article: Strategic Network Formation with \\ Structural Holes}
 \author{Clebson C. A. de Sá}
 
 \begin{document}
 \maketitle
 
 
-The paper approaches the importance of an agent that serves as intermediary bridges between groups of users. 
+The paper approaches the importance of an agent that serves as an intermediary bridge between groups of users.
 An interesting aspect of these agents is that they have power, and this power can be used for personal purposes, such as influencing the entire group that they are in. 
-The author arguments that in a real life situation, these agents can be seem as managers within a large company.
-The main discussion of the article is that in practice, there is a strategic aspect to the theory in which the network is shaped by agents who are trying to create bridging structures.
-Thus, the paper main idea is to study the structure of the network when there are many agents trying to act as these local bridges.
+The author arguments that in a real life situation, these agents are managers within a large company.
+The main discussion of the article is that in practice, there is a strategic aspect that shapes the structure of the network, and this structure is shaped by the number of agents that are trying to build these local bridges in order to increase its influence.
 
-To analyse these structure, the author defines a social network as an undirected graph, in which nodes are agents and the relationship of two agents is an edge.
-The graph analysis basically consists of modelling the graph as a game. This game has the following properties: 
-\textit{(i)} Every agent $u$ connected to $v$ has an cost $c(u, v)$ that defines the effort to maintain the relationship of the two agents. 
-\textit{(ii)} Every node derives a direct benefit $\alpha_0$ from each of their nodes. 
-\textit{(iii)} The importance for each node is basically cost matrix. The author defines two metrics of cost. The first one is a uniform cost, which considers that all nodes in the graph has a cost of $1$, and a hierarchical cost, that considers that the cost is the shortest paths in a tree representing a organizational structure.
+To analyze these structure, the author defines a social network as an undirected graph, in which nodes are agents and the relationship of two agents is an edge.
+The graph analysis basically consists of modeling the graph as a game. This game has the following properties: 
+\textit{(i)} Every agent $u$ connected to $v$ has a cost $c(u, v)$. This cost defines the effort to maintain the relationship of two different agents.
+\textit{(ii)} Every node $u$ within the graph derives a direct benefit $\alpha_0$ from each of their neighbor's nodes.
+\textit{(iii)} The importance of each node is basically cost matrix. The representation of the matrix is defined in two different ways; the first one is a uniform cost, which considers that all nodes in the graph have a cost of $1$; the second approach is to use a hierarchical cost. The hierarchical cost is the shortest path in a tree structure that represents a company organization.
 
-TODO: Conclusion of paper
-
-TODO: Relationship with metrics that we've study in class
+As result, the author explains that agents have large combinatorial strategy sets, since they can choose to link to any subset of other nodes. Besides that, the author also explains that there exists an algorithm in polynomial time, which is based in network flow that is capable of capturing the best response of an agent in a network.
+Regarding the metrics that we discussed in class, we can relate the influence of a agent as the node with maximum betweenness, and its power of influence can visualized as the degree of the node with maximum betweenness.
 
 \end{document}
