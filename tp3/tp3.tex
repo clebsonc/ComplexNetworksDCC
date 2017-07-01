@@ -8,13 +8,14 @@
 \epstopdfsetup{outdir=./}
 
 
-\title{Experiment with NetLogo: Report}
+\title{Experimento com NetLogo}
 \author{Clebson C. A. de Sá}
 
 \begin{document}
 \maketitle
 
-Questão 1: A primeira questão pede para considerar o modelo ``Small-World``.
+\section{Small World}
+A primeira questão pede para considerar o modelo ``Small-World``.
 A análise consistiu em uma rede baseada em 40 nós, no qual uma série de experimentos
 foram realizados no software NetLogo com o intuíto de entender as características 
 da rede.
@@ -23,12 +24,13 @@ consideração a probabilidade de conexão entre os nós. No programa é possív
 indicar a probabilidade que deseja avaliar por meio da variação do 
 parâmetro ``rewiring-probability''.
 As ligações são aleatoriamente proporcionais a esta probabilidade. Assim sendo,
-para se ter uma boa estimativa deste parâmetro fiz vários testes considerando 
-10 repetições para as probabilidades com um intervalo de 0.1 no intervalo
-$\left[0.1, 0.9\right]$ com o intuito de computar o desvio padrão e entender melhor
-a variação em relação a média. 
-Os resultados para este experimento pode ser visualizado
-na Figura \ref{fig:small-world}.
+para se ter uma boa estimativa deste parâmetro torna-se necessário efetuar repetições 
+do experimento para computar o desvio padrão e entender melhor a variação em relação
+a média. Para capturar esta informação foram executados 10 repetições para cada variação do parâmetro 
+``rewiring-probability'' considerando o intervalo de $\left[0.1, 0.9\right]$ com
+intercalação de $0.1$.
+Os resultados para este experimento podem ser visualizados na Figura \ref{fig:small-world}
+para ambas as métricas avaliadas com o devido desvio padrão.
 
 \begin{figure*}[h]
   \centering
@@ -40,13 +42,35 @@ na Figura \ref{fig:small-world}.
 
 Conforme podemos visualizar nesta figura, os valores para o Coeficiente de Clusterização
 e Diâmetro diminuem conforme aumenta-se a probabilidade de linkagem entre os nós.
-Isto é explicato devido ao aumento da quantidade de links  entre os nós.
-Observando os gráficos podemos também assumir que conforme a probabilidade se aproxima
-do máximo existe uma estabilização das métricas sendo analisadas.
+Isto é também confirmado ao observar o coeficiente de correlação Pearson de $0.88$
+considerando todas as amostras do experimento conforme mostrado na Figura \ref{fig:correlation}.
+
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{graphCorrelation.pdf}
+  \caption{Correlação de Pearson com Regressão Linear das métricas avaliadas.}
+  \label{fig:correlation}
+\end{figure*}
+
+Ainda nesta Figura, podemos observar a distribuição de ambas as métricas
+por meio do histograma em ambos os eixos. O histograma do  Coeficiente de Clusterização nos mostra
+que grande maioria dos valores observados estão espalhados entre 
+$\left[0.05, 0.15\right]$. Comparando este intervalo da distribuição de 
+clusterização podemos explicar melhor o motivo do alto valor do
+desvio padrão na Figura \ref{fig:small-world} em torno da probabilidade
+$\left[0.7, 0.9\right]$.
+Em relação à distribuição do Diâmetro podemos observar no histograma que a maior
+parte dos valores observados estão entre o intervalo $\left[2.5, 3.0\right]$.
+
+Podemos concluir que estes resultados de fato fazem sentido, visto que batem com
+o conceito de Redes de mundo pequeno, visto que com o aumento da probabilidade
+existe o aumento da quantidade de links  entre os nós. Logo podemos inferir os valores para quaisquer
+probabilidades por meio da regressão linear também mostrada na Figura \ref{fig:correlation}.
 
 
-Questão 2:
 
+\section{Aids}
+bla
 
 
 

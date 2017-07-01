@@ -33,23 +33,34 @@ def main(args):
         for val in range(1, 10, 1)], columns=["Clustering", "Diameter"],
         index = exp.keys())
     
-    sns.set()
-    fig, ax = plt.subplots(nrows=1, ncols=2)
-    ax[0].plot(df_exp["Clustering"], label="Mean Clustering Coefficient")
-    ax[1].plot(df_exp["Diameter"], label="Mean Diameter")
-    ax[0].set_xlabel("Rewiring probability")
-    ax[0].set_ylabel("Clustering Coefficient")
-    ax[1].set_xlabel("Rewiring probability")
-    ax[1].set_ylabel("Diameter")
-    ax[0].fill_between(df_exp.index, 
-            df_exp["Clustering"]-std_exp[0:,0], 
-            df_exp["Clustering"]+std_exp[0:,0], alpha=0.5, label="Standard Deviation")
-    ax[1].fill_between(df_exp.index, 
-            df_exp["Diameter"]-std_exp[0:,0], 
-            df_exp["Diameter"]+std_exp[0:,1], alpha=0.5, label="Standard Deviation")
-    ax[0].legend(loc="upper right")
-    ax[1].legend(loc="upper right")
-    plt.suptitle("Clustering Coefficiente and Diameter")
+    df_all_exp = list()
+    for key in exp:
+        for v1, v2 in exp[key]:
+            df_all_exp.append((v1, v2))
+    df_all_exp = np.asarray(df_all_exp)
+    df_all_exp = pd.DataFrame(df_all_exp, columns=["Clustering", "Diameter"])
+
+    sns.set(font_scale=1.5)
+#    fig, ax = plt.subplots(nrows=1, ncols=2)
+#    ax[0].plot(df_exp["Clustering"], label="Mean Clustering Coefficient")
+#    ax[1].plot(df_exp["Diameter"], label="Mean Diameter")
+#    ax[0].set_xlabel("Rewiring probability")
+#    ax[0].set_ylabel("Clustering Coefficient")
+#    ax[1].set_xlabel("Rewiring probability")
+#    ax[1].set_ylabel("Diameter")
+#    ax[0].fill_between(df_exp.index, 
+#            df_exp["Clustering"]-std_exp[0:,0], 
+#            df_exp["Clustering"]+std_exp[0:,0], alpha=0.5, label="Standard Deviation")
+#    ax[1].fill_between(df_exp.index, 
+#            df_exp["Diameter"]-std_exp[0:,0], 
+#            df_exp["Diameter"]+std_exp[0:,1], alpha=0.5, label="Standard Deviation")
+#    ax[0].legend(loc="upper right")
+#    ax[1].legend(loc="upper right")
+#    plt.suptitle("Clustering Coefficiente and Diameter")
+#    plt.show()
+#
+    sns.jointplot("Clustering", "Diameter", data=df_all_exp, kind="reg")
+    plt.suptitle("Pearson Correlation")
     plt.show()
 
 
