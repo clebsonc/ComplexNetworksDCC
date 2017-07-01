@@ -53,24 +53,49 @@ considerando todas as amostras do experimento conforme mostrado na Figura \ref{f
 \end{figure*}
 
 Ainda nesta Figura, podemos observar a distribuição de ambas as métricas
-por meio do histograma em ambos os eixos. O histograma do  Coeficiente de Clusterização nos mostra
-que grande maioria dos valores observados estão espalhados entre 
-$\left[0.05, 0.15\right]$. Comparando este intervalo da distribuição de 
-clusterização podemos explicar melhor o motivo do alto valor do
-desvio padrão na Figura \ref{fig:small-world} em torno da probabilidade
-$\left[0.7, 0.9\right]$.
+por meio do histograma em ambos os eixos. O histograma do  Coeficiente de 
+Clusterização nos mostra que grande maioria dos valores observados estão espalhados
+entre $\left[0.05, 0.15\right]$. Comparando este intervalo da distribuição de 
+clusterização podemos explicar melhor o motivo do alto valor do desvio padrão 
+na Figura \ref{fig:small-world} em torno da probabilidade $\left[0.7, 0.9\right]$.
 Em relação à distribuição do Diâmetro podemos observar no histograma que a maior
 parte dos valores observados estão entre o intervalo $\left[2.5, 3.0\right]$.
 
 Podemos concluir que estes resultados de fato fazem sentido, visto que batem com
 o conceito de Redes de mundo pequeno, visto que com o aumento da probabilidade
-existe o aumento da quantidade de links  entre os nós. Logo podemos inferir os valores para quaisquer
-probabilidades por meio da regressão linear também mostrada na Figura \ref{fig:correlation}.
+existe o aumento da quantidade de links  entre os nós. Logo podemos inferir os 
+valores para quaisquer probabilidades por meio da regressão linear também mostrada
+na Figura \ref{fig:correlation}.
 
 
 
 \section{Aids}
-bla
+Considerando os modelos de ciências sociais disponibilizado pelo Software Netlogo
+foi feito a simulação de infecção do vírus HIV em um conjunto de 300 pessoas. Nesta
+simulação está sendo considerado grupos de pessoas que tiveram relações sexuais
+mutuamente no mesmo período de tempo sem nenhuma fonte de segurança como utilização
+de preservativos.
+Os resultados para este experimento podem ser visualizados na Figura \ref{fig:aids}.
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=1\textwidth]{aids.pdf}
+  \caption{Simulação do vírus HIV}
+  \label{fig:aids}
+\end{figure*}
+
+Conforme podemos visualizar nesta Figura, quando a quantidade de relações conjuntas
+(i.e: parâmetro ``Av. Cup. Tend.'' no gráfico) são parametrizadas com 0 a porcentagem
+de pessoas infectadas é de $\approx 2.67$ durante todo o período em que as relações
+sexuais acontecem. Pode ser observado também nesta figura que conforme a quantidade
+de relações em conjunto aumenta, a tendência é atingir o maior número de pessoas
+infectadas nas semanas iniciais. Por exemplo, para o parâmetro ``Av. Coup. Tend.
+6 e 9'' podemos observar que todas as pessoas são infectadas logo na primeira seamana.
+Podemos concluir também que conforme as pessoas passam a ter tendências monogamicas
+a porcentagem de infecção é bem menor. Como exemplo podemos citar a porcentagem
+de infecções existentes no parâmetro ``Average Commitment 200'' que é abaixo
+de $15\%$.
+
 
 
 
