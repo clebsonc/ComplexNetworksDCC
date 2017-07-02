@@ -1,8 +1,13 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
 \usepackage[letterpaper, margin=3.cm]{geometry}
+\usepackage{subfig}
 \usepackage{graphicx}
 \graphicspath{{/home/clebson/Documents/ComplexNetworksDCC/tp3/img//}}
+
+\usepackage{setspace}
+\doublespacing
 
 \usepackage{epstopdf}
 \epstopdfsetup{outdir=./}
@@ -97,6 +102,26 @@ de infecções existentes no parâmetro ``Average Commitment 200'' que é abaixo
 de $15\%$.
 
 
+\section{Virus on a Network}
+Nesta questão é avaliado o espalhamento de vírus em uma rede de computadores.
+A avaliação consiste em variar o grau do nó na rede e identificar o status da rede
+após determinada quantidade de tempo. Todos os demais parâmetros do modelo foram
+mantidos com os valores padrão. Os resultados para este experimento podem ser visualizados
+na Figura \ref{fig:network-virus}. 
 
+\begin{figure*}[ht]
+  \centering
+  \subfloat[Node Degree 10]{\includegraphics[width=0.45\textwidth]{nodeDegree10.jpg}}
+  \subfloat[Node Degree 20]{\includegraphics[width=0.45\textwidth]{nodeDegree20.jpg}}\\
+  \subfloat[Node Degree 30]{\includegraphics[width=0.45\textwidth]{nodeDegree20.jpg}}
+  \subfloat[Node Degree 40]{\includegraphics[width=0.45\textwidth]{nodeDegree20.jpg}}
+  \caption{Variação da Distribuição de Grau}
+  \label{fig:network-virus}
+\end{figure*}
+
+Conforme pode ser visualizado, considerando o grau de distribuição igual a 10
+existe um alto grau de infecção nas primeiras unidades de tempo e logo em seguida
+os nós infectados começam a se tornar resistentes. O mesmo efeito é percebido para
+todas as outras variações dos nós.
 
 \end{document}
